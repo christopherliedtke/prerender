@@ -4,7 +4,7 @@ const prerender = require("./lib");
 
 const server = prerender({
   logRequests: true,
-  chromeLocation: "/usr/bin/google-chrome",
+  chromeLocation: "/app/.apt/usr/bin/google-chrome",
 });
 
 // https://github.com/prerender/prerender-memory-cache
