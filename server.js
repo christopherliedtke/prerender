@@ -1,7 +1,12 @@
 #!/usr/bin/env node
-var prerender = require('./lib');
+// https://github.com/christopherliedtke/prerender
+const prerender = require("./lib");
+// https://github.com/prerender/prerender-memory-cache
+server.use(require("prerender-memory-cache"));
 
-var server = prerender();
+const server = prerender({
+  logRequests: true,
+});
 
 server.use(prerender.sendPrerenderHeader());
 server.use(prerender.browserForceRestart());
