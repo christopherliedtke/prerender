@@ -11,6 +11,7 @@ const server = prerender({
 server.use(require("prerender-memory-cache"));
 
 server.use(require("./lib/plugins/whitelist"));
+server.use(require("./lib/plugins/blockResources"));
 
 server.use(prerender.sendPrerenderHeader());
 server.use(prerender.browserForceRestart());
